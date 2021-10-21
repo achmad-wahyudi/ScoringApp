@@ -39,7 +39,7 @@ class ScoringViewModel : ViewModel() {
         _team1Score.value = 0
         _team2Score.value = 0
         _eventFinish.value = false
-        _teams.value = ArrayList<String>()
+        _teams.value = ArrayList()
     }
 
     fun initTeam(team1: String, team2: String) {
