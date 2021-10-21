@@ -1,4 +1,4 @@
-package com.wahyuapp.scoringapp
+package com.wahyuapp.scoringapp.intro
 
 
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.wahyuapp.scoringapp.R
 import com.wahyuapp.scoringapp.databinding.FragmentIntroBinding
 
 
@@ -23,8 +24,11 @@ class IntroFragment : Fragment() {
         )
 
         binding.startBtn.setOnClickListener {
-            requireView().findNavController().navigate(IntroFragmentDirections.actionIntroFragmentToScoringFragment(
-                                                            binding.teamName1.text.toString(), binding.teamName2.text.toString()))
+            requireView().findNavController().navigate(
+                IntroFragmentDirections.actionIntroFragmentToScoringFragment(
+                    binding.teamName1.text.toString(), binding.teamName2.text.toString()
+                )
+            )
         }
 
         return binding.root

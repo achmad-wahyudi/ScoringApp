@@ -1,4 +1,4 @@
-package com.wahyuapp.scoringapp
+package com.wahyuapp.scoringapp.finish
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import com.wahyuapp.scoringapp.R
 import com.wahyuapp.scoringapp.databinding.FragmentFinishBinding
 
 
@@ -19,7 +20,7 @@ class FinishFragment : Fragment() {
             inflater, R.layout.fragment_finish, container, false
         )
 
-        var args = FinishFragmentArgs.fromBundle(requireArguments())
+        val args = FinishFragmentArgs.fromBundle(requireArguments())
 
          binding.resultText.text = args.result + " menang!! "
 
